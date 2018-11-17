@@ -1,0 +1,21 @@
+
+server:
+  port: 8004
+
+spring:
+    application:
+        name: app-toov5-member
+ַeureka:
+  client:
+    service-url:
+ 
+           defaultZone: http://127.0.0.1:8100/eureka
+           
+
+    register-with-eureka: true
+
+    fetch-registry: true
+
+
+
+  

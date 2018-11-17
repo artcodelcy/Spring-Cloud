@@ -1,0 +1,21 @@
+###���������˿ں�
+server:
+  port: 8005
+###��������(����ע�ᵽeureka����)  
+spring:
+    application:
+        name: app-toov5-member
+###����ע�ᵽeureka��ַ
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+
+           
+###��Ϊ��Ӧ��Ϊע�����ģ�����ע���Լ�
+    register-with-eureka: true
+###�Ƿ���Ҫ��eureka�ϻ�ȡע����Ϣ
+    fetch-registry: true
+
+swagger:
+  base-package:  com.toov5.api.service.impl

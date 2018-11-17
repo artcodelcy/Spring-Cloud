@@ -1,0 +1,20 @@
+
+server:
+  port: 8002
+
+spring:
+    application:
+        name: app-toov5-order
+ַeureka:
+  client:
+    service-url:
+           defaultZone: http://127.0.0.1:8100/eureka
+
+           
+
+    register-with-eureka: true
+
+    fetch-registry: true
+
+swagger:
+  base-package:  com.toov5.api.controller    

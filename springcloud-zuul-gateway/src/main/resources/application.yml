@@ -1,0 +1,31 @@
+###注册 中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+server:  ##api网关端口号
+  port: 81
+###网关名称
+spring:   ##网关服务名称
+  application:
+    name: service-zuul
+  ###网关名称  
+  cloud:
+    config:
+    ####读取后缀
+      profile: dev
+      ####读取config-server注册地址
+      discovery:
+        service-id: confi
+    
+### 配置网关反向代理    
+zuul:
+  routes:
+    api-member:  ##随便写的
+     ### 以 /api-member/访问转发到会员服务   通过别名找
+      path: /api-member/**
+      serviceId: app-toov5-member  ##别名  如果集群的话  默认整合了ribbon 实现轮训 负载均衡
+    api-order:   ##随便写的
+        ### 以 /api-order/访问转发到订单服务
+      path: /api-order/**
+      serviceId: app-toov5-order   ##别名

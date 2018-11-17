@@ -1,0 +1,17 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: app-toov5-eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8100/eureka
+###集群地址  或者不写死 端口号改变 端口号改为对方的eureka端口号
+eureka:
+  client:
+    service-url:
+##           defaultZone: http://${eureka.instance.hostname}:8100/eureka/  ##其他eureka服务的地址
+           defaultZone: http://127.0.0.1:8100/eureka/  ##其他eureka服务的地址
+    register-with-eureka: true
+    fetch-registry: true
